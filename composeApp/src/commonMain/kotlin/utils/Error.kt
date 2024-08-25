@@ -1,0 +1,3 @@
+package utils
+
+interface Error
