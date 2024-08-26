@@ -58,6 +58,9 @@ kotlin {
             implementation(libs.lifecycle.viewmodel)
 
             implementation(libs.bundles.ktor)
+
+            api(libs.datastore)
+            api(libs.datastore.preferences)
         }
 
         nativeMain.dependencies {
@@ -67,6 +70,8 @@ kotlin {
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.ktor.client.okhttp)
+
+            runtimeOnly(libs.swing)
         }
     }
 }
